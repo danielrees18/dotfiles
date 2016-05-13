@@ -1,0 +1,27 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Daniel Rees
+email = drees@diagnotes.com
+
+[alias]
+  st = status
+  cm = commit
+  br = branch
+  co = checkout
+  rh = reset --hard
+  lol = log --format=oneline
+  cob = checkout -b
+  comfi = diff-tree --no-commit-id --name-only -r
+  undo = reset HEAD~1 --mixed
+  amend = commit -a --amend
+  bclean = "!f() { git branch --merged ${1-develop} | grep -v " ${1-develop}$" | xargs git branch -d; }; f"
+
+[hub]
+protocol = https
+
+[core]
+excludesfile = /opt/boxen/config/git/gitignore
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
