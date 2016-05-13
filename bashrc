@@ -5,16 +5,20 @@ if [ -f /opt/boxen/env.sh ]; then
   source /opt/boxen/env.sh
 fi
 
-if [ -f /opt/boxen/homebrew/etc/bash_completion.d/git-prompt.sh ]; then
-  source /opt/boxen/homebrew/etc/bash_completion.d/git-prompt.sh
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  source $(brew --prefix)/etc/bash_completion
 fi
 
-if [ -f /opt/boxen/homebrew/etc/bash_completion.d/git-completion.bash ]; then
-  source /opt/boxen/homebrew/etc/bash_completion.d/git-completion.bash
-fi
+# Enable git completion for alias
+__git_complete gco _git_checkout
+__git_complete gb _git_branch
+__git_complete gl _git_pull
+__git_complete gp _git_push
+__git_complete gm _git_merge
+__git_complete gbase _git_rebase
 
 # Enable hiding entries prefixed with a space
-# export HISTCONTROL=ignorespace
+export HISTCONTROL=ignorespace
 
 # Enable color file listings
 export CLICOLOR=1
