@@ -9,6 +9,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   source $(brew --prefix)/etc/bash_completion
 fi
 
+# Enable thefuck tool: https://github.com/nvbn/thefuck
+eval "$(thefuck --alias)"
+# You can use whatever you want as an alias, like for Mondays:
+eval "$(thefuck --alias FUCK)"
+
 # Enable git completion for alias
 __git_complete gco _git_checkout
 __git_complete gb _git_branch
