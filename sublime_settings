@@ -1,0 +1,21 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+  "theme": "Afterglow-green.sublime-theme",
+  "color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+
+  "ignored_packages":
+    [
+    "Vintage"
+  ],
+  "rulers":
+  [
+    120
+  ],
+  "sidebar_row_padding_medium": true,
+  "sidebar_size_12": true,
+  "tab_size": 2,
+  "tabs_medium": true,
+  "tabs_medium": true,"draw_white_space": "all",
+  "translate_tabs_to_spaces": true
+}
