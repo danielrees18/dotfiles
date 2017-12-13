@@ -2,6 +2,8 @@ success() {
   (blink1 --rgb 0,0xff,0 --blink 3 > /dev/null &)
 }
 
+function dn() { ./dn.sh "$@" ; }
+
 fail() {
   (blink1 --rgb 0xff,0,0 --blink 3 > /dev/null &)
 }
